@@ -9,11 +9,17 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.get('/todos', (req, res) => {
-  res.send(
-    [{
+  res.send([
+    {
       title: "Take out the garbage",
-      description: "Take out the garbage or my wife will murder me in cold blood."
-  }])
+    },
+    {
+      title: "Pick up kids from school",
+    },
+    {
+      title: "Finish backend for siljan",
+    }
+  ])
 })
 
 app.listen(process.env.PORT || 8081)
